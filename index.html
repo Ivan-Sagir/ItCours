@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <header>
+    <div id="logo" onclick="slowScroll('#top')">
+      <span>itLern</span>
+    </div>
+    <div id="about">
+    <a href="#" title="Возможности" onclick="slowScroll('#main')">Возможности</a>
+    <a href="#" title="Преимущества" onclick="slowScroll('#overview')">Преимущества</a>
+    <a href="#" title="Контакты" onclick="slowScroll('#contacts')">Контакты</a>
+    </div>
+  </header>
+
+  <div id="top">
+    <h1>Програмирование</h1>
+    <h3>Как смысл жизни!</h3>
+  </div>
+
+<div id="main">
+  <div class="intro">
+    <h2>Наши услуги помогут вам!</h2>
+    <span>Большой выбор всего, что может вам пригодиться</span>
+  </div>
+  <div class="text">
+    <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    Iusto eum reprehenderit natus labore, dolor saepe odio maiores.
+    Id veniam odit impedit quibusdam, quam, sint omnis molestias commodi error suscipit illo voluptatum modi quo.
+    Laborum recusandae ipsum vero explicabo aspernatur est ex similique eius libero?
+    Ipsa suscipit nobis laudantium, animi repellendus.</span>
+  </div>
+</div>
+
+<div id="overview">
+  <h2>Преимущества</h2>
+  <h4>С нами все проще</h4>
+
+  <div class="img">
+    <img src="https://lifehacker.ru/wp-content/uploads/2019/10/prog_2_1571836784.png" alt="">
+    <span>25 бесплатных онлайн-курсов программирования</span>
+  </div>
+  <div class="img">
+    <img src="https://unetway.com/uploads/blog/0a/0a/6b/0a0a6b8915fa91112581e80922de0e64.jpg" alt="">
+    <span>Стоит ли идти на курсы по программированию</span>
+  </div>
+  <div class="img">
+    <img src="https://dev.by/storage/images/22/72/03/49/derived/f85d4ecd9073fcdf08cbe3126253e70d.jpg" alt="">
+    <span>Курсов по программированию - онлайн курсы популярных языков разработки</span>
+  </div>
+  <div class="img">
+    <img src="https://kamala-soft.com/upload/iblock/9f5/9f523ca4061de59f44aad5d594058e81.png" alt="">
+    <span>Курсы программирования 1С</span>
+  </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+  function slowScroll(id) {
+    $('html, body').animate({
+      scrollTop: $(id).offset().top
+    }, 500);
+  }
+
+$(document).on("scroll", function() {
+  if ($(window).scrollTop() === 0)
+    $("header"). removeClass ("fixed");
+  else
+    $("header").attr("class","fixed")
+});
+
+</script>
+
+
+</body>
+</html>
